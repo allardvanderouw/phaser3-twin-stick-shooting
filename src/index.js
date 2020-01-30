@@ -110,7 +110,7 @@ function update(time, delta) {
       const bullet = this.bullets.get().setActive(true).setVisible(true);
       bullet.fire(this.player)
 
-      this.bulletCooldown = 200
+      this.bulletCooldown = 100
     }
   }
 
