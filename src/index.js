@@ -74,7 +74,7 @@ function create() {
   // Create movement joystick
   this.movementJoyStick = this.plugins.get('rexvirtualjoystickplugin').add(this.scene, {
     x: 100,
-    y: this.cameras.main.height - 100,
+    y: this.cameras.main.height - 125,
     radius: 40,
     forceMin: 0,
     base: this.add.circle(0, 0, 60, 0x888888, 0.5).setDepth(100),
@@ -84,7 +84,7 @@ function create() {
   // Create shooting joystick
   this.shootJoyStick = this.plugins.get('rexvirtualjoystickplugin').add(this.scene, {
     x: this.cameras.main.width - 100,
-    y: this.cameras.main.height - 100,
+    y: this.cameras.main.height - 125,
     radius: 20,
     forceMin: 0,
     base: this.add.circle(0, 0, 60, 0x888888, 0.5).setDepth(100),
