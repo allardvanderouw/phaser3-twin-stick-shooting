@@ -105,10 +105,14 @@ function create() {
 
   // Add transparency to joysticks on pointer-up
   this.input.on('pointerup', (pointer) => {
-    this.movementJoyStick.base.setAlpha(0.25)
-    this.movementJoyStick.thumb.setAlpha(0.5)
-    this.shootJoyStick.base.setAlpha(0.25)
-    this.shootJoyStick.thumb.setAlpha(0.5)
+    if (!this.movementJoyStick.force) {
+      this.movementJoyStick.base.setAlpha(0.25)
+      this.movementJoyStick.thumb.setAlpha(0.5)
+    }
+    if (!this.shootJoyStick.force) {
+      this.shootJoyStick.base.setAlpha(0.25)
+      this.shootJoyStick.thumb.setAlpha(0.5)
+    }
   })
 
   this.bullets = this.physics.add.group({ classType: Bullet, runChildUpdate: true })
